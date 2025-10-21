@@ -1,0 +1,260 @@
+2025-10-20 13:11:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.10 with PID 20756 (C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo\twitter-to-kafka-service\target\classes started by camec in C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo)
+2025-10-20 13:11:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 13:11:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 3.81 seconds (process running for 5.59)
+2025-10-20 13:11:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - TwitterToKafkaServiceApplication started with keywords: [Java, Microservices, Kafka, Spring Boot, Elasticsearch, AWS]
+2025-10-20 13:11:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Welcome to the Twitter to Kafka Service
+2025-10-20 17:24:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.10 with PID 16636 (C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo\twitter-to-kafka-service\target\classes started by camec in C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo)
+2025-10-20 17:24:16 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 17:24:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.598 seconds (process running for 3.712)
+2025-10-20 17:24:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - TwitterToKafkaServiceApplication started with keywords: [Java, Microservices, Kafka, Spring Boot, Elasticsearch, AWS]
+2025-10-20 17:24:17 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Welcome to the Twitter to Kafka Service
+2025-10-20 17:25:33 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.10 with PID 21344 (C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo\twitter-to-kafka-service\target\classes started by camec in C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo)
+2025-10-20 17:25:33 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 17:25:34 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.489 seconds (process running for 3.904)
+2025-10-20 17:25:34 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - TwitterToKafkaServiceApplication started with keywords: [Java, Microservices, Kafka, Spring Boot, Elasticsearch, AWS]
+2025-10-20 17:25:34 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Welcome to the Twitter to Kafka Service
+2025-10-20 17:25:34 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-20 17:25:34 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" because the return value of "com.microservices.demo.twitter.to.kafka.service.config.TwitterToKakfaConfigData.getMockSleepMs()" is null
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.MockKafkaStreamRunner.start(MockKafkaStreamRunner.java:73)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:32)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:25)
+2025-10-20 17:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.10 with PID 2840 (C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo\twitter-to-kafka-service\target\classes started by camec in C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo)
+2025-10-20 17:27:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 17:27:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.616 seconds (process running for 3.994)
+2025-10-20 17:27:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - TwitterToKafkaServiceApplication started with keywords: [Java, Microservices, Kafka, Spring Boot, Elasticsearch, AWS]
+2025-10-20 17:27:02 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Welcome to the Twitter to Kafka Service
+2025-10-20 17:27:02 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Starting mock filtering twitter streams for keywords
+2025-10-20 17:27:02 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit ipsum ipsum Maecenas Spring Boot libero pulvinar
+2025-10-20 17:27:12 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa posuere lectus Maecenas Kafka ipsum massa sed
+2025-10-20 17:27:22 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas consectetuer purus Microservices amet malesuada
+2025-10-20 17:27:32 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer magna Maecenas pulvinar libero posuere ultricies porttitor Microservices amet consectetuer porttitor porttitor purus massa posuere
+2025-10-20 17:31:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 17.0.10 with PID 13960 (C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo\twitter-to-kafka-service\target\classes started by camec in C:\Users\camec\OneDrive\Documentos\Microservices\microservices-demo)
+2025-10-20 17:31:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-20 17:31:05 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.578 seconds (process running for 3.793)
+2025-10-20 17:31:05 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - TwitterToKafkaServiceApplication started with keywords: [Java, Microservices, Kafka, Spring Boot, Elasticsearch, AWS]
+2025-10-20 17:31:05 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Welcome to the Twitter to Kafka Service
+2025-10-20 17:31:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Starting mock filtering twitter streams for keywords
+2025-10-20 17:31:05 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere ipsum libero magna Java Maecenas purus Maecenas
+2025-10-20 17:31:15 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus ipsum congue libero sed Elasticsearch amet malesuada malesuada posuere
+2025-10-20 17:31:25 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus congue elit adipiscing ultricies congue Kafka congue sit sit ipsum
+2025-10-20 17:31:35 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer ultricies ultricies libero pulvinar Fusce Kafka purus libero adipiscing sed Maecenas
+2025-10-20 17:31:45 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer consectetuer ipsum dolor AWS ultricies ultricies
+2025-10-20 17:31:55 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum lectus ipsum lectus Elasticsearch sed adipiscing
+2025-10-20 17:32:05 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum posuere purus massa ultricies adipiscing congue Kafka sed lectus Lorem libero Maecenas purus
+2025-10-20 17:32:15 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce pulvinar ipsum sit AWS ultricies posuere elit
+2025-10-20 17:32:25 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas amet lectus dolor amet pulvinar magna Microservices Lorem ultricies Lorem lectus dolor massa
+2025-10-20 17:32:35 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing ultricies pulvinar sit malesuada Java adipiscing consectetuer lectus elit
+2025-10-20 17:32:45 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce elit adipiscing Lorem purus elit porttitor Microservices purus elit lectus Lorem purus amet
+2025-10-20 17:32:55 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce purus sed sed amet porttitor ultricies ultricies Spring Boot adipiscing lectus consectetuer ipsum elit sed
+2025-10-20 17:33:05 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce porttitor congue pulvinar malesuada sit consectetuer AWS elit magna magna porttitor amet
+2025-10-20 17:33:15 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum sed malesuada posuere libero posuere consectetuer purus Microservices purus massa posuere Fusce congue massa Fusce
+2025-10-20 17:33:25 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem sit Fusce Lorem elit ultricies dolor Spring Boot elit amet Lorem lectus Fusce adipiscing
+2025-10-20 17:33:35 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce pulvinar ultricies purus amet adipiscing Kafka Fusce lectus adipiscing ipsum sed
+2025-10-20 17:33:45 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar ipsum magna Lorem Lorem AWS Lorem malesuada sit
+2025-10-20 17:33:55 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce dolor amet elit posuere sit lectus pulvinar Microservices Lorem massa ipsum dolor magna amet Fusce
+2025-10-20 17:34:05 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer massa sed magna sed dolor Spring Boot purus amet malesuada lectus libero
+2025-10-20 17:34:15 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit elit consectetuer malesuada malesuada porttitor malesuada consectetuer Microservices dolor elit Fusce amet pulvinar purus
+2025-10-20 17:34:25 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum massa malesuada Maecenas porttitor Lorem porttitor Kafka libero ultricies adipiscing amet libero
+2025-10-20 17:34:35 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus pulvinar sed amet libero pulvinar posuere Kafka adipiscing elit amet Maecenas magna
+2025-10-20 17:34:45 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum elit Maecenas sed ultricies massa porttitor elit Kafka consectetuer amet malesuada ultricies magna pulvinar Maecenas
+2025-10-20 17:34:55 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada amet adipiscing ipsum pulvinar congue Microservices purus ultricies ipsum adipiscing purus
+2025-10-20 17:35:05 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet dolor purus porttitor Lorem purus Spring Boot posuere lectus adipiscing malesuada magna
+2025-10-20 17:35:15 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor purus dolor lectus dolor pulvinar amet Java congue Lorem porttitor Fusce amet congue
+2025-10-20 17:35:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor amet dolor massa magna consectetuer ipsum pulvinar AWS amet libero libero Maecenas adipiscing dolor
+2025-10-20 17:35:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor sed posuere libero ultricies dolor consectetuer Maecenas Kafka adipiscing lectus elit sed malesuada sit
+2025-10-20 17:35:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer Lorem dolor posuere massa libero Elasticsearch massa pulvinar porttitor adipiscing posuere
+2025-10-20 17:35:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit pulvinar Maecenas porttitor Maecenas sed pulvinar porttitor Kafka lectus consectetuer amet posuere Maecenas consectetuer sed
+2025-10-20 17:36:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere sed Maecenas Lorem adipiscing elit Spring Boot massa ultricies pulvinar pulvinar
+2025-10-20 17:36:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor congue posuere Spring Boot consectetuer libero
+2025-10-20 17:36:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue adipiscing porttitor sed porttitor AWS congue consectetuer massa
+2025-10-20 17:36:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies amet congue Lorem malesuada lectus porttitor Spring Boot ultricies malesuada congue Fusce Fusce libero
+2025-10-20 17:36:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer malesuada purus Lorem Lorem sed magna Elasticsearch adipiscing purus posuere posuere consectetuer
+2025-10-20 17:36:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet Fusce Fusce porttitor adipiscing elit dolor massa Elasticsearch pulvinar purus Maecenas pulvinar massa ultricies amet
+2025-10-20 17:37:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada congue lectus posuere dolor elit ultricies Java Maecenas Maecenas magna lectus porttitor consectetuer
+2025-10-20 17:37:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce pulvinar pulvinar sit libero Microservices porttitor purus malesuada
+2025-10-20 17:37:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit Lorem libero libero ultricies lectus posuere Fusce Spring Boot Maecenas consectetuer pulvinar sed magna libero amet
+2025-10-20 17:37:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies sed malesuada Maecenas Maecenas Maecenas porttitor amet Spring Boot congue magna dolor dolor congue Lorem
+2025-10-20 17:37:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit libero purus congue pulvinar amet sit ultricies AWS pulvinar pulvinar adipiscing purus magna libero magna
+2025-10-20 17:37:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit posuere porttitor Fusce pulvinar Lorem Kafka Maecenas posuere amet Lorem
+2025-10-20 17:38:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa congue magna elit Maecenas sit elit Microservices purus Lorem pulvinar Fusce congue sit
+2025-10-20 17:38:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing adipiscing sed ultricies consectetuer posuere posuere libero Spring Boot malesuada sit adipiscing ipsum porttitor sit
+2025-10-20 17:38:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar ipsum sed libero Java lectus massa
+2025-10-20 17:38:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor consectetuer Lorem congue lectus Lorem Lorem sed Microservices Maecenas consectetuer Fusce ultricies pulvinar purus
+2025-10-20 17:38:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas sed purus libero Java dolor elit
+2025-10-20 17:38:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna dolor consectetuer Java massa elit
+2025-10-20 17:39:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor congue porttitor ultricies Fusce massa pulvinar Elasticsearch ipsum libero amet posuere sit libero
+2025-10-20 17:39:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa congue Lorem amet lectus Spring Boot ultricies sit elit purus
+2025-10-20 17:39:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer dolor amet sed Kafka ultricies pulvinar magna
+2025-10-20 17:39:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum massa Fusce ipsum sit pulvinar ipsum posuere Kafka adipiscing Maecenas purus lectus amet Fusce Lorem
+2025-10-20 17:39:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue magna purus purus purus sed consectetuer Fusce Java dolor porttitor Maecenas adipiscing sit magna
+2025-10-20 17:39:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere pulvinar lectus amet sed Lorem AWS ultricies malesuada pulvinar purus sit
+2025-10-20 17:40:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas ultricies Fusce amet consectetuer Lorem amet Microservices massa libero ipsum posuere Lorem
+2025-10-20 17:40:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada consectetuer adipiscing massa posuere adipiscing congue Spring Boot sit ipsum amet libero adipiscing
+2025-10-20 17:40:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed Fusce Fusce massa magna magna AWS sed consectetuer congue elit adipiscing
+2025-10-20 17:40:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce sed magna sit adipiscing sed elit sed Microservices sit lectus Maecenas posuere amet elit
+2025-10-20 17:40:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit Lorem dolor lectus sit Java congue sed malesuada
+2025-10-20 17:40:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero sit Fusce magna ultricies ultricies congue Microservices malesuada libero posuere ultricies sed
+2025-10-20 17:41:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue massa Lorem porttitor ultricies posuere Spring Boot massa Lorem dolor sit
+2025-10-20 17:41:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit Lorem elit elit Elasticsearch Lorem pulvinar
+2025-10-20 17:41:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing libero ipsum AWS posuere elit
+2025-10-20 17:41:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies adipiscing sit malesuada ipsum Elasticsearch consectetuer pulvinar ultricies elit
+2025-10-20 17:41:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum sit sit congue amet elit Microservices ultricies massa amet Lorem
+2025-10-20 17:41:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus elit adipiscing libero lectus libero pulvinar massa AWS purus sed elit malesuada massa congue
+2025-10-20 17:42:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna dolor elit magna Fusce ipsum elit Maecenas Elasticsearch massa malesuada malesuada Lorem purus pulvinar
+2025-10-20 17:42:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer massa pulvinar libero ultricies amet Elasticsearch porttitor massa ipsum purus
+2025-10-20 17:42:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed ipsum purus Elasticsearch posuere purus
+2025-10-20 17:42:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere Fusce Fusce porttitor lectus Lorem purus dolor Elasticsearch posuere Lorem lectus magna lectus massa purus
+2025-10-20 17:42:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet Fusce congue posuere Spring Boot congue massa
+2025-10-20 17:42:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue magna pulvinar Lorem congue sit sit purus Elasticsearch congue adipiscing porttitor pulvinar adipiscing massa
+2025-10-20 17:43:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue ultricies sed Lorem congue Kafka Fusce Maecenas sed
+2025-10-20 17:43:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem malesuada libero ipsum Kafka congue congue
+2025-10-20 17:43:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor sit purus adipiscing AWS ultricies libero magna
+2025-10-20 17:43:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce adipiscing elit AWS dolor Lorem
+2025-10-20 17:43:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas magna massa adipiscing purus dolor dolor lectus Spring Boot Lorem ipsum malesuada elit sit porttitor porttitor
+2025-10-20 17:43:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum Lorem purus libero sit sed lectus AWS adipiscing elit sed malesuada Lorem Maecenas
+2025-10-20 17:44:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing amet congue ipsum congue elit lectus Spring Boot ultricies sed Fusce pulvinar adipiscing sed
+2025-10-20 17:44:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere ipsum Lorem porttitor lectus congue pulvinar Microservices magna posuere sit sed sed adipiscing
+2025-10-20 17:44:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing ultricies consectetuer Maecenas lectus Fusce sit libero Microservices lectus ultricies porttitor elit adipiscing lectus
+2025-10-20 17:44:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem adipiscing congue ipsum Lorem massa Spring Boot posuere ipsum elit adipiscing elit
+2025-10-20 17:44:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor ipsum sit elit ultricies pulvinar porttitor AWS ultricies purus Lorem Maecenas dolor posuere
+2025-10-20 17:44:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada massa purus pulvinar lectus congue Microservices amet sit magna amet Lorem
+2025-10-20 17:45:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada ultricies Lorem consectetuer ipsum dolor Microservices sed sit elit libero ipsum
+2025-10-20 17:45:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum consectetuer sit magna Maecenas lectus posuere sed Microservices lectus sit lectus amet libero porttitor amet
+2025-10-20 17:45:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed dolor consectetuer elit Spring Boot libero massa congue
+2025-10-20 17:45:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing magna pulvinar Fusce sit Fusce ultricies Kafka porttitor sed ipsum purus lectus dolor
+2025-10-20 17:45:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero consectetuer ultricies porttitor adipiscing amet Fusce massa Java massa porttitor massa Lorem amet porttitor
+2025-10-20 17:45:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus porttitor elit purus Kafka libero lectus Maecenas
+2025-10-20 17:46:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada Lorem ultricies elit malesuada congue sit dolor Kafka amet consectetuer lectus pulvinar magna lectus magna
+2025-10-20 17:46:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus ipsum sed malesuada congue amet porttitor AWS Lorem consectetuer sed purus consectetuer
+2025-10-20 17:46:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet ipsum massa consectetuer libero lectus libero Kafka posuere pulvinar Fusce congue magna
+2025-10-20 17:46:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero lectus consectetuer ultricies magna congue Elasticsearch Lorem Fusce amet ultricies
+2025-10-20 17:46:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce dolor Fusce dolor ipsum consectetuer porttitor Elasticsearch Fusce Fusce consectetuer dolor pulvinar
+2025-10-20 17:46:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada Fusce sit adipiscing Fusce Microservices lectus sit purus porttitor
+2025-10-20 17:47:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor libero consectetuer malesuada posuere elit lectus Kafka lectus ipsum massa sit malesuada congue
+2025-10-20 17:47:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas sed libero elit adipiscing elit Spring Boot magna Maecenas massa ultricies elit
+2025-10-20 17:47:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing amet consectetuer adipiscing amet libero consectetuer ultricies Kafka Lorem consectetuer lectus consectetuer magna adipiscing
+2025-10-20 17:47:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies ultricies Fusce pulvinar porttitor amet massa Java magna malesuada Fusce consectetuer massa sed
+2025-10-20 17:47:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor magna Maecenas ipsum amet Java congue Lorem sed
+2025-10-20 17:47:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas purus posuere Kafka ipsum malesuada
+2025-10-20 17:48:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus consectetuer pulvinar pulvinar Spring Boot purus amet
+2025-10-20 17:48:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce elit Fusce pulvinar AWS adipiscing ipsum porttitor
+2025-10-20 17:48:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus magna adipiscing ultricies dolor purus pulvinar Java purus libero Lorem sed malesuada
+2025-10-20 17:48:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing Lorem consectetuer malesuada ipsum posuere consectetuer Microservices malesuada libero posuere dolor magna
+2025-10-20 17:48:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem Lorem purus AWS elit sit
+2025-10-20 17:48:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor porttitor adipiscing Elasticsearch amet consectetuer
+2025-10-20 17:49:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing ipsum porttitor massa elit Lorem amet AWS lectus Maecenas elit malesuada congue
+2025-10-20 17:49:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus pulvinar adipiscing massa adipiscing consectetuer Lorem congue Spring Boot ipsum purus Lorem libero posuere Fusce libero
+2025-10-20 17:49:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada Fusce consectetuer porttitor Microservices adipiscing sed
+2025-10-20 17:49:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet consectetuer malesuada porttitor ipsum Spring Boot dolor porttitor purus pulvinar
+2025-10-20 17:49:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue ultricies lectus Lorem pulvinar magna congue Java sit lectus purus malesuada ultricies adipiscing
+2025-10-20 17:49:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue purus elit massa magna Lorem lectus purus Elasticsearch elit malesuada Lorem ultricies elit Lorem
+2025-10-20 17:50:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas pulvinar lectus sit AWS adipiscing adipiscing massa
+2025-10-20 17:50:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies pulvinar Fusce lectus sit Elasticsearch congue massa amet
+2025-10-20 17:50:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus ultricies amet Spring Boot congue Maecenas
+2025-10-20 17:50:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus malesuada sit Fusce congue congue Lorem congue Microservices adipiscing congue posuere Lorem Lorem purus ultricies
+2025-10-20 17:50:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus Maecenas posuere Microservices ipsum sit
+2025-10-20 17:50:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas lectus sed purus AWS purus elit
+2025-10-20 17:51:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit porttitor Lorem lectus libero purus Fusce pulvinar AWS malesuada elit amet consectetuer Lorem Lorem
+2025-10-20 17:51:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue ultricies posuere lectus sed amet posuere libero AWS Lorem purus consectetuer elit lectus ipsum
+2025-10-20 17:51:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa posuere magna amet massa Java porttitor Fusce Fusce
+2025-10-20 17:51:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero posuere Lorem ipsum Lorem Microservices lectus Lorem sit porttitor
+2025-10-20 17:51:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce dolor ipsum Kafka amet Maecenas
+2025-10-20 17:51:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed pulvinar ultricies dolor magna adipiscing amet Elasticsearch consectetuer adipiscing ipsum consectetuer magna Maecenas
+2025-10-20 17:52:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer ipsum sit Lorem congue AWS adipiscing adipiscing malesuada
+2025-10-20 17:52:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing sit consectetuer posuere pulvinar ultricies consectetuer Lorem Kafka libero libero lectus consectetuer ultricies consectetuer
+2025-10-20 17:52:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue lectus elit posuere sed magna porttitor Java libero adipiscing dolor dolor congue
+2025-10-20 17:52:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet porttitor magna lectus elit ultricies magna pulvinar Spring Boot consectetuer elit malesuada amet adipiscing Fusce ipsum
+2025-10-20 17:52:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing elit magna Kafka purus elit
+2025-10-20 17:52:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem magna posuere lectus ipsum sed libero magna Kafka Lorem Lorem Fusce lectus sit Maecenas
+2025-10-20 17:53:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum amet libero AWS purus ipsum
+2025-10-20 17:53:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer sit posuere amet sed Spring Boot amet purus Fusce
+2025-10-20 17:53:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada porttitor libero libero posuere magna Microservices sed porttitor libero porttitor dolor
+2025-10-20 17:53:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar libero Lorem pulvinar AWS sed Maecenas porttitor
+2025-10-20 17:53:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet ipsum pulvinar amet lectus AWS porttitor lectus sed Fusce
+2025-10-20 17:53:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere amet pulvinar malesuada consectetuer dolor Java elit Fusce Maecenas magna sed
+2025-10-20 17:54:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus consectetuer adipiscing Fusce lectus Java Lorem magna magna
+2025-10-20 17:54:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce purus sit pulvinar consectetuer dolor dolor Fusce Java libero ultricies Fusce malesuada elit malesuada
+2025-10-20 17:54:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna Lorem Lorem Fusce Microservices libero posuere magna
+2025-10-20 17:54:36 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed magna porttitor Kafka congue purus
+2025-10-20 17:54:46 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed dolor purus consectetuer ultricies consectetuer Spring Boot Maecenas consectetuer consectetuer Maecenas Maecenas
+2025-10-20 17:54:56 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ultricies sed elit Elasticsearch adipiscing lectus
+2025-10-20 17:55:06 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas dolor libero Maecenas Elasticsearch porttitor lectus
+2025-10-20 17:55:16 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada Lorem Maecenas sed Kafka libero libero
+2025-10-20 17:55:26 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa amet dolor Maecenas purus Java purus amet amet libero
+2025-10-20 17:55:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor pulvinar dolor Fusce consectetuer Spring Boot porttitor massa porttitor
+2025-10-20 17:55:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor malesuada lectus malesuada purus AWS Lorem adipiscing amet
+2025-10-20 17:55:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Maecenas Lorem congue massa ipsum elit AWS Lorem pulvinar congue porttitor dolor
+2025-10-20 17:56:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit ipsum purus purus purus Elasticsearch elit ultricies pulvinar magna
+2025-10-20 17:56:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar malesuada congue libero lectus porttitor libero amet AWS malesuada consectetuer amet ultricies consectetuer malesuada ultricies
+2025-10-20 17:56:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer adipiscing sit amet elit Java Maecenas ipsum lectus libero
+2025-10-20 17:56:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: congue ipsum pulvinar sit posuere Lorem libero massa Elasticsearch massa sed massa magna posuere lectus
+2025-10-20 17:56:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus ultricies purus amet amet Microservices elit ipsum posuere ultricies
+2025-10-20 17:56:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero pulvinar consectetuer Kafka libero purus
+2025-10-20 17:57:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: malesuada Fusce Maecenas amet posuere Microservices congue sed elit Fusce
+2025-10-20 17:57:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna ultricies amet libero Spring Boot ultricies Fusce ultricies
+2025-10-20 17:57:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum Maecenas porttitor amet porttitor Lorem massa Java purus massa dolor malesuada pulvinar amet
+2025-10-20 17:57:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar dolor elit Kafka magna sit
+2025-10-20 17:57:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere malesuada massa libero Spring Boot libero pulvinar adipiscing
+2025-10-20 17:57:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing ipsum posuere porttitor magna Spring Boot magna malesuada malesuada
+2025-10-20 17:58:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit dolor magna Maecenas pulvinar Microservices congue magna libero Fusce
+2025-10-20 17:58:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer ultricies lectus Spring Boot massa Lorem
+2025-10-20 17:58:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna Lorem elit dolor congue Maecenas elit magna Spring Boot libero Lorem lectus magna libero congue
+2025-10-20 17:58:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus lectus magna posuere ipsum Fusce Microservices adipiscing amet purus Maecenas malesuada
+2025-10-20 17:58:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor malesuada congue ultricies AWS dolor purus elit
+2025-10-20 17:58:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa sit pulvinar magna lectus Elasticsearch consectetuer elit posuere
+2025-10-20 17:59:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere Lorem posuere magna Kafka purus sit
+2025-10-20 17:59:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere purus consectetuer purus Microservices Maecenas purus Fusce
+2025-10-20 17:59:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna Maecenas massa ipsum dolor Lorem ipsum Fusce Microservices magna Fusce massa consectetuer congue posuere
+2025-10-20 17:59:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: pulvinar congue malesuada malesuada Maecenas elit AWS ultricies posuere posuere purus
+2025-10-20 17:59:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor malesuada congue dolor Lorem pulvinar Kafka elit ipsum Fusce lectus ultricies
+2025-10-20 17:59:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem sit dolor massa amet sed consectetuer Spring Boot magna adipiscing dolor posuere Fusce sed
+2025-10-20 18:00:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed dolor Fusce Maecenas amet AWS sit Fusce dolor sed
+2025-10-20 18:00:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor libero elit lectus Kafka malesuada congue libero
+2025-10-20 18:00:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing Fusce Maecenas libero Java purus adipiscing
+2025-10-20 18:00:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere malesuada Fusce libero Maecenas Spring Boot magna Maecenas sit porttitor
+2025-10-20 18:00:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: amet ipsum congue elit Fusce adipiscing elit Kafka congue Fusce ultricies purus pulvinar
+2025-10-20 18:00:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor massa consectetuer magna ipsum magna Spring Boot congue Fusce pulvinar posuere
+2025-10-20 18:01:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit congue elit Java purus consectetuer
+2025-10-20 18:01:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: porttitor elit lectus consectetuer ipsum sit sed Microservices adipiscing posuere purus dolor sit sed
+2025-10-20 18:01:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: ipsum lectus posuere congue Spring Boot lectus congue Lorem
+2025-10-20 18:01:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: purus ultricies massa magna posuere lectus massa AWS Fusce ipsum amet amet adipiscing posuere
+2025-10-20 18:01:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: massa massa sit Maecenas Kafka Lorem massa
+2025-10-20 18:01:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: posuere amet Lorem congue ipsum Fusce pulvinar AWS porttitor libero dolor consectetuer sed
+2025-10-20 18:02:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem massa purus ultricies Maecenas Spring Boot elit elit Lorem
+2025-10-20 18:02:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit magna sed purus ipsum porttitor Kafka consectetuer adipiscing amet dolor
+2025-10-20 18:02:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero sed posuere amet dolor consectetuer lectus purus AWS dolor amet Lorem lectus massa Lorem amet
+2025-10-20 18:02:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sed adipiscing ipsum congue Spring Boot ipsum Fusce
+2025-10-20 18:02:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: dolor dolor Lorem posuere porttitor Spring Boot porttitor adipiscing consectetuer sit
+2025-10-20 18:02:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit libero ultricies purus Spring Boot magna posuere libero
+2025-10-20 18:03:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: sit amet Lorem malesuada congue amet adipiscing magna AWS purus malesuada Maecenas Lorem sit Lorem magna
+2025-10-20 18:03:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Lorem amet purus pulvinar sed Java amet porttitor purus
+2025-10-20 18:03:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: libero malesuada porttitor congue Lorem adipiscing purus AWS congue Maecenas adipiscing elit ipsum ipsum
+2025-10-20 18:03:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: Fusce malesuada ipsum ipsum dolor massa malesuada amet Kafka Fusce purus dolor elit porttitor Lorem massa
+2025-10-20 18:03:47 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit malesuada Lorem magna adipiscing amet Elasticsearch posuere malesuada ipsum pulvinar
+2025-10-20 18:03:57 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: adipiscing adipiscing sed congue porttitor consectetuer purus lectus AWS porttitor Lorem ipsum sit lectus congue
+2025-10-20 18:04:07 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: magna elit congue purus porttitor Fusce pulvinar AWS ultricies dolor consectetuer ultricies malesuada libero
+2025-10-20 18:04:17 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: elit malesuada Fusce Lorem ipsum malesuada ipsum Maecenas Spring Boot elit magna malesuada magna consectetuer malesuada
+2025-10-20 18:04:27 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: consectetuer elit libero magna porttitor pulvinar Microservices lectus libero ipsum posuere
+2025-10-20 18:04:37 [pool-2-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status: lectus elit lectus malesuada Spring Boot Maecenas elit
