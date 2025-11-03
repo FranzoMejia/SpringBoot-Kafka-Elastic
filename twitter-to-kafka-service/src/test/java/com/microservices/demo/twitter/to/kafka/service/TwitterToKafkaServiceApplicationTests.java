@@ -1,4 +1,4 @@
-package com.microservices.demo.twitter.to.kagka.service;
+package com.microservices.demo.twitter.to.kafka.service;
 
 import com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication;
 import org.junit.jupiter.api.Test;

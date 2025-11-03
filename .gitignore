@@ -4,6 +4,12 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+docker-compose/docker-logs/
+twitter-to-kafka-service/logs/archived/
+twitter-to-kafka-service/twitter-to-kafka-service/logs/archived/
+*.log
+twitter-to-kafka-service/twitter-to-kafka-service/logs/
+
 
 ### STS ###
 .apt_generated

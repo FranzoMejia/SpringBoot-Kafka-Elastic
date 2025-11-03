@@ -1,0 +1,4 @@
+--To run kafkacat in windows
+  docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:19092
+--To run kafkacat in linux
+ kafkacat -L -b localhost:19092
