@@ -1,4 +1,7 @@
 --To run kafkacat in windows
   docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:19092
+  docker run -it --network=host confluentinc/cp-kafkacat kafkacat -C -b localhost:19092 -t twitter-topic
+  docker run -it --network=host confluentinc/cp-kafkacat kafkacat -C -b 127.0.0.1:19092 -t twitter-topic
+
 --To run kafkacat in linux
  kafkacat -L -b localhost:19092

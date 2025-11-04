@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/FranzoMejia/spring-cloud-config-server-repository
+          default-label: main
+          username: camecac35@gmail.com
+          password:
+          clone-on-start: true
+    fail-fast: true
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
