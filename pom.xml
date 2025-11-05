@@ -17,6 +17,9 @@
 		<module>twitter-to-kafka-service</module>
         <module>app-config-data</module>
 		<module>kafka</module>
+		<module>kafka/kafka-producer</module>
+		<module>kafka/kafka-admin</module>
+		<module>kafka/kafka-model</module>
 		<module>common-config</module>
 		<module>config-server</module>
 	</modules>
@@ -53,6 +56,7 @@
 		<spring-cloud-config-server.version>4.3.0</spring-cloud-config-server.version>
 		<spring-cloud-config-server-dependencies.version>2024.0.2</spring-cloud-config-server-dependencies.version>
 		<spring-cloud-starter-config.version>4.3.0</spring-cloud-starter-config.version>
+		<jasypt-spring-boot-starter.version>3.0.3</jasypt-spring-boot-starter.version>
 	</properties>
 
 	<repositories>
@@ -164,6 +168,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-security</artifactId>
 				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-spring-boot-starter</artifactId>
+				<version>${jasypt-spring-boot-starter.version}</version>
 			</dependency>
 
 			<dependency>

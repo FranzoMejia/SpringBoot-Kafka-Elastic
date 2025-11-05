@@ -5,3 +5,6 @@
 
 --To run kafkacat in linux
  kafkacat -L -b localhost:19092
+
+ --Agrega esta variable de entorno en windows para que reconozca localhost
+ JASYPT_ENCRYPTOR_PASSWORD= <tu nombre>M.1

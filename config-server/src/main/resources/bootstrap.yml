@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/FranzoMejia/spring-cloud-config-server-repository
+          default-label: main
+          username: camecac35@gmail.com
+          password: ENC(OGwn/0yqGSY0N2H6iaYtl4DL86HN3xCmEQ3vVCCKl+FiIwpgAGPV7UGgcb4u1XptdR2lU+60JvqHlPHxBVhaxzTZVjerJ6hfBBQJzevRML8=)
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: camecac35@gmail.com
+      password: ENC(OGwn/0yqGSY0N2H6iaYtl4DL86HN3xCmEQ3vVCCKl+FiIwpgAGPV7UGgcb4u1XptdR2lU+60JvqHlPHxBVhaxzTZVjerJ6hfBBQJzevRML8=)
+
+jasypt:
+  encryptor:
+    password: oscarM.1
