@@ -11,13 +11,14 @@ spring:
           uri: https://github.com/FranzoMejia/spring-cloud-config-server-repository
           default-label: main
           username: camecac35@gmail.com
-          password: ********
+          password: '{cipher}1844c8d31341bd41c3f920eb436442c15110728f872e4ce5b5f2368a9d5e3b39f359590515e3cbc5689abf140028a2c3c2a8987134ee485e4191fa77387f14ed'
           clone-on-start: true
     fail-fast: true
   security:
     user:
       name: spring_cloud_user
       password: springCloud_Pwd!
+
 logging:
   level:
     ROOT: INFO
