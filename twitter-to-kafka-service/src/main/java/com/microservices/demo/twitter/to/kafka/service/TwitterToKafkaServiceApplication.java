@@ -26,6 +26,12 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     }
 
     public static void main(String[] args) {
+        try {
+            //waiting for config server to be up
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         org.springframework.boot.SpringApplication.run(TwitterToKafkaServiceApplication.class, args);
     }
 
