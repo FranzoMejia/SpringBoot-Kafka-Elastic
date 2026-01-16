@@ -5,3 +5,7 @@
 
 --To run kafkacat in linux
  kafkacat -L -b localhost:19092
+
+ --To access config-server
+ http://localhost:8888/config-client-twitter_to_kafka.yml
+

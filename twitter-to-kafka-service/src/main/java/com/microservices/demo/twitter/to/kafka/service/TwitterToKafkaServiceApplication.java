@@ -28,7 +28,7 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     public static void main(String[] args) {
         try {
             //waiting for config server to be up
-            Thread.sleep(60000);
+            Thread.sleep(6);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

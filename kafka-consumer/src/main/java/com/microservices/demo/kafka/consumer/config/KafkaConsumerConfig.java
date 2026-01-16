@@ -35,7 +35,7 @@ public class KafkaConsumerConfig <K extends Serializable, V extends Serializable
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,kafkaConsumerConfigData.getValueDeserializer());
         props.put(ConsumerConfig.GROUP_ID_CONFIG,kafkaConsumerConfigData.getConsumerGroupId());
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,kafkaConsumerConfigData.getAutoOffsetReset());
-        props.put(kafkaConfigData.getSchemaRegistryUrlKey(),kafkaConsumerConfigData.getSessionTimeoutMs());
+        props.put(kafkaConfigData.getSchemaRegistryUrlKey(), kafkaConfigData.getSchemaRegistryUrl());
         props.put(kafkaConsumerConfigData.getSpecificAvroReaderKey(),kafkaConsumerConfigData.getSpecificAvroReader());
         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG,kafkaConsumerConfigData.getSessionTimeoutMs());
         props.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG,kafkaConsumerConfigData.getHeartBeatIntervalMs());

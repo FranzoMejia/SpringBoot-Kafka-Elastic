@@ -59,7 +59,7 @@ public class KafkaAdminClient {
         }
     }
 
-    private HttpStatusCode getSchemaRegistryStatus(){
+    public HttpStatusCode getSchemaRegistryStatus(){
         try {
             return webClient
                     .method(HttpMethod.GET)
@@ -84,7 +84,7 @@ public class KafkaAdminClient {
         }
         checkTopicsCreated();
     }
-    private void checkTopicsCreated() {
+    public void checkTopicsCreated() {
         Collection<TopicListing> topics = getTopics();
         int retryCount = 1;
         Integer maxRetry = retryConfigData.getMaxAttempts();
@@ -101,7 +101,7 @@ public class KafkaAdminClient {
 
     }
 
-    private void sleep(Long sleepTimeMs) {
+    public void sleep(Long sleepTimeMs) {
         try {
             LOG.info("Sleeping for {} ms before next retry to check if topics are created",sleepTimeMs);
             Thread.sleep(sleepTimeMs);
@@ -110,19 +110,19 @@ public class KafkaAdminClient {
         }
     }
 
-    private void checkMaxRetry(int retry, Integer maxRetry) {
+    public void checkMaxRetry(int retry, Integer maxRetry) {
         if(retry>maxRetry){
             throw new KafkaClientException("Max number of retries "+maxRetry+" exhausted");
         }
     }
 
-    private boolean isTopicCreated(Collection<TopicListing> topics, String topic) {
+    public boolean isTopicCreated(Collection<TopicListing> topics, String topic) {
         if(topics.isEmpty())
             return false;
         return topics.stream().anyMatch(t -> t.name().equals(topic));
     }
 
-    private CreateTopicsResult doCreateTopics(RetryContext retryContext) {
+    public CreateTopicsResult doCreateTopics(RetryContext retryContext) {
         List<String> topicNames = kafkaConfigData.getTopicNamesToCreate();
         LOG.info("Creating {} topic(s), attempt{}", topicNames.size(), retryContext.getRetryCount());
         List<NewTopic> kafkaTopics = topicNames.stream()
@@ -135,7 +135,7 @@ public class KafkaAdminClient {
         return adminClient.createTopics(kafkaTopics);
     }
 
-    private Collection<TopicListing> getTopics(){
+    public Collection<TopicListing> getTopics(){
         try {
             return retryTemplate.execute(this::doGetTopics);
         }catch (Throwable t){
@@ -143,7 +143,7 @@ public class KafkaAdminClient {
         }
     }
 
-    private Collection<TopicListing> doGetTopics(RetryContext retryContext) throws ExecutionException,InterruptedException {
+    public Collection<TopicListing> doGetTopics(RetryContext retryContext) throws ExecutionException,InterruptedException {
         LOG.info("Reading kafka topic {},attempt {}", kafkaConfigData.getTopicNamesToCreate(), retryContext.getRetryCount());
         Collection<TopicListing> topics = adminClient.listTopics().listings().get();
         if(topics!=null)
