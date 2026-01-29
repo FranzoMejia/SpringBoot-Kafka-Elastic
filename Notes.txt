@@ -9,3 +9,6 @@
  --To access config-server
  http://localhost:8888/config-client-twitter_to_kafka.yml
 
+--Swagger UI: http://localhost:8183/elastic-query-service/swagger-ui
+  OpenAPI 3 JSON spec: http://localhost:8183/elastic-query-service/api-docs
+  OpenAPI 3 YAML spec: http://localhost:8183/elastic-query-service/api-docs.yaml
