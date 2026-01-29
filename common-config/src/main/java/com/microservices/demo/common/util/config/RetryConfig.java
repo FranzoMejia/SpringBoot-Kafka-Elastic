@@ -1,4 +1,4 @@
-package com.microservices.demo.common.config;
+package com.microservices.demo.common.util.config;
 
 import com.microservices.demo.config.RetryConfigData;
 import org.springframework.context.annotation.Bean;
