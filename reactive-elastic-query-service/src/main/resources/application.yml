@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: reactive-elastic-query-service
+  profiles:
+    active: reactive_elastic_query
+  cloud:
+    config:
+      name: reactive-elastic-query-service,config-client
+      username: spring_cloud_user
+      password: springCloud_Pwd!
+  main:
+    web-application-type: reactive
+  webflux:
+    base-path: /reactive-elastic-query-service
+  codec:
+    max-in-memory-size: 25MB
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          max-in-memory-size: 25MB
+  elasticsearch:
+    reactive:
+      uris: http://localhost:9200
+      connection-timeout: 5s
+      socket-timeout: 30s
