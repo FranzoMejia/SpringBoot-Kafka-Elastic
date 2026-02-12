@@ -30,7 +30,7 @@ public class TwitterReactiveElasticQueryClient implements ReactiveElasticQueryCl
     @Override
     public Flux<TwitterIndexModel> getIndexModelByText(String text) {
         LOG.info("Get index model by text: {}", text);
-        return elasticQueryRepository.findAll()
+        return elasticQueryRepository.findByText(text)
                 .delayElements(Duration.ofMillis(elasticQueryServiceConfigData.getBackPressureDelayMs()));
 
     }
