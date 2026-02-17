@@ -8,3 +8,9 @@ spring:
       name: elastic-query-service,config-client
       username: spring_cloud_user
       password: springCloud_Pwd!
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/auth/realms/microservices_realm
+          jwk-set-uri: http://localhost:8081/auth/realms/microservices_realm/protocol/openid-connect/certs

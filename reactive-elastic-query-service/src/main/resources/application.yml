@@ -24,3 +24,6 @@ spring:
       uris: http://localhost:9200
       connection-timeout: 5s
       socket-timeout: 30s
+
+elastic-query-config:
+  text-field: text

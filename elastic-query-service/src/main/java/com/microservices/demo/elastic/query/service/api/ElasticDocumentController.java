@@ -16,11 +16,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@PreAuthorize("isAuthenticated()")
 @RestController
 @RequestMapping(value="/documents",produces = "application/vnd.api-v1+json")
 public class ElasticDocumentController {
@@ -99,6 +101,9 @@ public class ElasticDocumentController {
 
 
 
+
+
+    @PreAuthorize("hasRole('APP_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
     @Operation(summary = "Get elastic documents by text", description = "Retrieve documents from the Elasticsearch index that match the given text.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved documents", content={
@@ -126,4 +131,16 @@ public class ElasticDocumentController {
         responseModelV2.add(document.getLinks());
         return responseModelV2;
     }
+
+    @PostMapping("/get-document-by-text-test")
+    public @ResponseBody ResponseEntity<List<ElasticQueryServiceResponseModel>>
+    getDocumentByTextTest(@RequestHeader(value = "Authorization", required = false) String authorizationHeader,@RequestBody @Valid ElasticQueryServiceRequestModel elasticQueryServiceRequestModel) {
+        List<ElasticQueryServiceResponseModel> documents = elasticQueryService.getDocumentsByText(elasticQueryServiceRequestModel.getText());
+        LOG.info("Retrieving documents with text: {}. Total documents found: {}, on port:{}", elasticQueryServiceRequestModel.getText(), documents.size(), port);
+        return ResponseEntity.ok(documents);
+    }
+
+
+
+
 }
