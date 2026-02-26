@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import static com.microservices.demo.elastic.query.service.Constants.NA;
 
@@ -15,6 +16,7 @@ import static com.microservices.demo.elastic.query.service.Constants.NA;
 public class TwitterQueryUser implements UserDetails {
     private String username;
     private Collection<? extends GrantedAuthority> authorities;
+    private Map<String,PermissionType> permissions;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;

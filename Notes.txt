@@ -12,3 +12,6 @@
 --Swagger UI: http://localhost:8183/elastic-query-service/swagger-ui
   OpenAPI 3 JSON spec: http://localhost:8183/elastic-query-service/api-docs
   OpenAPI 3 YAML spec: http://localhost:8183/elastic-query-service/api-docs.yaml
+
+--To get access token from keycloak using password grant type
+  curl -X POST -d "grant_type=password&username=app_user&password=app_user&client_id=elastic-query-web-client&client_secret=9c17ffd3-f38c-4659-8609-1a27afc71ae3" http://localhost:8081/auth/realms/microservices_realm/protocol/openid-connect/token

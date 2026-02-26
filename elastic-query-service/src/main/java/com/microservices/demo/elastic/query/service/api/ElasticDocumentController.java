@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +37,7 @@ public class ElasticDocumentController {
     }
 
 
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @Operation(summary = "Get all elastic documents", description = "Retrieve all documents from the Elasticsearch index.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved all documents", content={
@@ -53,6 +55,7 @@ public class ElasticDocumentController {
         return ResponseEntity.ok(documents);
     }
 
+    @PreAuthorize("hasPermission(#id, 'ElasticQueryServiceResponseModel', 'READ')")
     @Operation(summary = "Get elastic document by ID", description = "Retrieve a document from the Elasticsearch index by its ID.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved the document", content={
@@ -104,6 +107,7 @@ public class ElasticDocumentController {
 
 
     @PreAuthorize("hasRole('APP_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
+    @PostAuthorize("hasPermission(returnObject, 'READ')")
     @Operation(summary = "Get elastic documents by text", description = "Retrieve documents from the Elasticsearch index that match the given text.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved documents", content={
