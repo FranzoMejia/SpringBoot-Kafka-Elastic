@@ -1,7 +1,6 @@
 package com.microservices.demo.elastic.query.web.client.service.impl;
 
 import com.microservices.demo.config.ElasticQueryWebClientConfigData;
-
 import com.microservices.demo.elastic.query.web.client.common.api.exception.ElasticQueryWebClientException;
 import com.microservices.demo.elastic.query.web.client.common.api.model.ElasticQueryWebClientRequestModel;
 import com.microservices.demo.elastic.query.web.client.common.api.model.ElasticQueryWebClientResponseModel;
@@ -13,7 +12,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.http.MediaType;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.BodyInserters;

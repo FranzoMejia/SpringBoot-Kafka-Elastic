@@ -35,13 +35,15 @@ public class TwitterQueryUserJwtConverter implements Converter<Jwt, AbstractAuth
     @Override
     public AbstractAuthenticationToken convert(Jwt jwt) {
         Collection<GrantedAuthority> authoritiesFromJwt = getAuthoritiesFromJwt(jwt);
-        return Optional.ofNullable(
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = Optional.ofNullable(
                         twitterQueryUserDetailsService.loadUserByUsername(jwt.getClaimAsString(USERNAME_CLAIM)))
                 .map(userDetails -> {
                     ((TwitterQueryUser) userDetails).setAuthorities(authoritiesFromJwt);
+                    System.out.println("User details: " + userDetails);
                     return new UsernamePasswordAuthenticationToken(userDetails, NA, authoritiesFromJwt);
                 })
                 .orElseThrow(() -> new BadCredentialsException("User could not be found!"));
+        return usernamePasswordAuthenticationToken;
     }
 
     private Collection<GrantedAuthority> getAuthoritiesFromJwt(Jwt jwt) {

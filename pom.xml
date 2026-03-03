@@ -32,6 +32,7 @@
 		<module>elastic-query-service-common</module>
 		<module>elastic-query-web-client-common</module>
 		<module>reactive-elastic-query-service</module>
+        <module>elastic-query-web-client-2</module>
     </modules>
 	<packaging>pom</packaging>
 	<url/>
@@ -310,6 +311,10 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency><dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-oauth2-client</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
 			<dependency>

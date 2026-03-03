@@ -54,7 +54,6 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Set session policy to STATELESS
                 )
-
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwt -> jwt.jwtAuthenticationConverter(twitterQueryUserJwtConverter()))); // Enable JWT authentication with defaults
         return http.build();
@@ -62,7 +61,7 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    Converter<Jwt, ? extends AbstractAuthenticationToken> twitterQueryUserJwtConverter() {//
+    Converter<Jwt, ? extends AbstractAuthenticationToken> twitterQueryUserJwtConverter() {
          return new TwitterQueryUserJwtConverter(twitterQueryUserDetailsService);
     }
 }

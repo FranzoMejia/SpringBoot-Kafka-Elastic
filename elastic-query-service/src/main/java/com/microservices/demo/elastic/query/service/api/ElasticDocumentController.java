@@ -25,7 +25,7 @@ import java.util.List;
 
 @PreAuthorize("isAuthenticated()")
 @RestController
-@RequestMapping(value="/documents",produces = "application/vnd.api-v1+json")
+@RequestMapping(value="/documents",produces = "application/vnd.api.v1+json")
 public class ElasticDocumentController {
     private static final Logger LOG = LoggerFactory.getLogger(ElasticDocumentController.class);
     private final ElasticQueryService elasticQueryService;
@@ -41,7 +41,7 @@ public class ElasticDocumentController {
     @Operation(summary = "Get all elastic documents", description = "Retrieve all documents from the Elasticsearch index.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved all documents", content={
-                    @Content(mediaType = "application/vnd.api-v1+json",
+                    @Content(mediaType = "application/vnd.api.v1+json",
                             schema = @Schema(implementation = ElasticQueryServiceResponseModel.class))
 
             }),
@@ -59,7 +59,7 @@ public class ElasticDocumentController {
     @Operation(summary = "Get elastic document by ID", description = "Retrieve a document from the Elasticsearch index by its ID.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved the document", content={
-                    @Content(mediaType = "application/vnd.api-v1+json",
+                    @Content(mediaType = "application/vnd.api.v1+json",
                             schema = @Schema(implementation = ElasticQueryServiceResponseModel.class))
 
             }),
@@ -111,7 +111,7 @@ public class ElasticDocumentController {
     @Operation(summary = "Get elastic documents by text", description = "Retrieve documents from the Elasticsearch index that match the given text.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved documents", content={
-                    @Content(mediaType = "application/vnd.api-v1+json",
+                    @Content(mediaType = "application/vnd.api.v1+json",
                             schema = @Schema(implementation = ElasticQueryServiceResponseModel.class))
 
             }),
