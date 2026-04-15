@@ -37,6 +37,7 @@
 		<module>reactive-elastic-query-service</module>
         <module>elastic-query-web-client-2</module>
 		<module>kafka-streams-service</module>
+		<module>analytics-service</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
@@ -86,6 +87,9 @@
 		<kafka-streams.version>4.2.0</kafka-streams.version>
 		<kafka-clients.version>4.2.0</kafka-clients.version>
 		<kafka-streams-avro-serde.version>8.1.1</kafka-streams-avro-serde.version>
+		<persistence-api.version>1.0.2</persistence-api.version>
+		<validation-api.version>2.0.1.Final</validation-api.version>
+		<jta.version>1.1</jta.version>
 	</properties>
 
 	<repositories>
@@ -169,6 +173,28 @@
 				<version>${project.version}</version>
 			</dependency>
 			<!-- Remote -->
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>persistence-api</artifactId>
+				<version>${persistence-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${validation-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>${jta.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.transaction</groupId>
+				<artifactId>jakarta.transaction-api</artifactId>
+				<version>2.0.1</version>
+				<scope>compile</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.apache.avro</groupId>
 				<artifactId>avro-maven-plugin</artifactId>
@@ -319,7 +345,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-data-jpa</artifactId>
 				<version>${spring-boot.version}</version>
-			</dependency><dependency>
+			</dependency>
+			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-oauth2-client</artifactId>
 				<version>${spring-boot.version}</version>
