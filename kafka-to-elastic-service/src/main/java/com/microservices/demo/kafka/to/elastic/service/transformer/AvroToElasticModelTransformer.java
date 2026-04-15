@@ -1,7 +1,7 @@
 package com.microservices.demo.kafka.to.elastic.service.transformer;
 
 import com.microservices.demo.elastic.model.index.impl.TwitterIndexModel;
-import com.microservices.kafka.avro.model.TwitterAvroModel;
+import com.microservices.demo.kafka.avro.model.TwitterAvroModel;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;

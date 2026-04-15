@@ -2,6 +2,7 @@ package com.microservices.demo.elastic.query.web.client.api;
 
 
 
+import com.microservices.demo.elastic.query.web.client.common.api.model.ElasticQueryWebClientAnalyticsResponseModel;
 import com.microservices.demo.elastic.query.web.client.common.api.model.ElasticQueryWebClientRequestModel;
 import com.microservices.demo.elastic.query.web.client.common.api.model.ElasticQueryWebClientResponseModel;
 import com.microservices.demo.elastic.query.web.client.service.ElasticQueryWebClient;
@@ -44,9 +45,10 @@ public class QueryController {
     @PostMapping("/query-by-text")
     public String queryByText(@Valid ElasticQueryWebClientRequestModel requestModel, Model model) {
         LOG.info("Received query request for text: {}", requestModel.getText());
-        List<ElasticQueryWebClientResponseModel> responseModels = elasticQueryWebClient.getDataByText(requestModel);
+        ElasticQueryWebClientAnalyticsResponseModel responseModel = elasticQueryWebClient.getDataByText(requestModel);
 
-        model.addAttribute("elasticQueryWebClientResponseModels", responseModels);
+        model.addAttribute("elasticQueryWebClientResponseModels", responseModel.getQueryResponseModels());
+        model.addAttribute("wordCount", responseModel.getWordCount());
         model.addAttribute("searchText", requestModel.getText());
         model.addAttribute("elasticQueryWebClientRequestModel", ElasticQueryWebClientRequestModel.builder().build());
         return "home";
