@@ -28,10 +28,10 @@ import java.util.concurrent.ExecutionException;
 public class KafkaAdminClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(KafkaAdminClient.class);
-    private final KafkaConfigData kafkaConfigData;
-    private final RetryConfigData retryConfigData;
+    public final KafkaConfigData kafkaConfigData;
+    public final RetryConfigData retryConfigData;
     private final AdminClient adminClient;
-    private final RetryTemplate retryTemplate;
+    public final RetryTemplate retryTemplate;
     private final WebClient webClient;
     public KafkaAdminClient(KafkaConfigData kafkaConfigData,
                             RetryConfigData retryConfigData,

@@ -17,6 +17,9 @@
 		<module>twitter-to-kafka-service</module>
         <module>app-config-data</module>
 		<module>kafka</module>
+		<module>kafka/kafka-model</module>
+		<module>kafka/kafka-admin</module>
+		<module>kafka/kafka-producer</module>
 		<module>common-config</module>
 		<module>config-server</module>
         <module>kafka-consumer</module>
@@ -33,7 +36,8 @@
 		<module>elastic-query-web-client-common</module>
 		<module>reactive-elastic-query-service</module>
         <module>elastic-query-web-client-2</module>
-    </modules>
+		<module>kafka-streams-service</module>
+	</modules>
 	<packaging>pom</packaging>
 	<url/>
 	<licenses>
@@ -54,7 +58,7 @@
 		<maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 		<twiter4j.version>4.0.7</twiter4j.version>
 		<lombok.version>1.18.42</lombok.version>
-		<avro.version>1.11.2</avro.version>
+		<avro.version>1.12.0</avro.version>
 		<spring-kafka.version>3.3.10</spring-kafka.version>
 		<spring-retry.version>2.0.2</spring-retry.version>
 		<spring-webflux.version>5.0.0.RELEASE</spring-webflux.version>
@@ -79,6 +83,9 @@
 		<spring-cloud-starter-loadbalancer.version>5.0.1</spring-cloud-starter-loadbalancer.version>
 		<spring-boot-starter-reactor-netty.version>4.0.2</spring-boot-starter-reactor-netty.version>
 		<postgresql.version>42.6.1</postgresql.version>
+		<kafka-streams.version>4.2.0</kafka-streams.version>
+		<kafka-clients.version>4.2.0</kafka-clients.version>
+		<kafka-streams-avro-serde.version>8.1.1</kafka-streams-avro-serde.version>
 	</properties>
 
 	<repositories>
@@ -316,6 +323,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-oauth2-client</artifactId>
 				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-streams</artifactId>
+				<version>${kafka-streams.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-clients</artifactId>
+				<version>${kafka-clients.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.confluent</groupId>
+				<artifactId>kafka-streams-avro-serde</artifactId>
+				<version>${kafka-streams-avro-serde.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.confluent</groupId>

@@ -11,6 +11,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,24 +24,31 @@ import org.springframework.security.web.SecurityFilterChain;
 import java.util.Arrays;
 
 @Configuration
-@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig {
 
     @Value("${security.paths-to-ignore}")
     private String[] pathsToIgnore;
 
 
-    private final OAuth2ResourceServerProperties oAuth2ResourceServerProperties;
     private final TwitterQueryUserDetailsService twitterQueryUserDetailsService;
-    private final JwtAuthenticationConverter jwtAuthenticationConverter;
+
+    private final OAuth2ResourceServerProperties oAuth2ResourceServerProperties;
+
+    public WebSecurityConfig(TwitterQueryUserDetailsService userDetailsService,
+                             OAuth2ResourceServerProperties resourceServerProperties) {
+        this.twitterQueryUserDetailsService = userDetailsService;
+        this.oAuth2ResourceServerProperties = resourceServerProperties;
+    }
 
 
 
 
-    public WebSecurityConfig(OAuth2ResourceServerProperties oAuth2ResourceServerProperties, TwitterQueryUserDetailsService twitterQueryUserDetailsService, JwtAuthenticationConverter jwtAuthenticationConverter) {
+
+    public WebSecurityConfig(OAuth2ResourceServerProperties oAuth2ResourceServerProperties, TwitterQueryUserDetailsService twitterQueryUserDetailsService) {
         this.oAuth2ResourceServerProperties = oAuth2ResourceServerProperties;
         this.twitterQueryUserDetailsService = twitterQueryUserDetailsService;
-        this.jwtAuthenticationConverter = jwtAuthenticationConverter;
+
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
