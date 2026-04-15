@@ -38,6 +38,7 @@
         <module>elastic-query-web-client-2</module>
 		<module>kafka-streams-service</module>
 		<module>analytics-service</module>
+		<module>discovery-service</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
